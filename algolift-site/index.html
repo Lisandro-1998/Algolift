@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="google-site-verification" content="google3eb353ec820ca722">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Algolift — Organisches Wachstum</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #0a0a0a;
+    --white: #f5f5f0;
+    --neon: #c8ff00;
+    --coral: #ff6b4a;
+    --gray: #1a1a1a;
+    --gray2: #2a2a2a;
+    --muted: #888;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 3rem;
+    border-bottom: 1px solid #1f1f1f;
+    position: sticky;
+    top: 0;
+    background: var(--black);
+    z-index: 100;
+  }
+  .logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    letter-spacing: .08em;
+    color: var(--white);
+  }
+  .logo span { color: var(--neon); }
+  .nav-cta {
+    background: var(--neon);
+    color: var(--black);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 10px 24px;
+    border-radius: 999px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: opacity .2s;
+  }
+  .nav-cta:hover { opacity: .85; }
+
+  /* HERO */
+  .hero {
+    padding: 6rem 3rem 5rem;
+    text-align: center;
+    border-bottom: 1px solid #1f1f1f;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.18;
+    z-index: 0;
+    pointer-events: none;
+  }
+  .hero-content { position: relative; z-index: 1; }
+  .hero-tag {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--neon);
+    border: 1px solid var(--neon);
+    padding: 5px 16px;
+    border-radius: 999px;
+    margin-bottom: 2rem;
+  }
+  .hero h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(64px, 10vw, 120px);
+    line-height: .95;
+    letter-spacing: .02em;
+    color: var(--white);
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+  }
+  .hero h1 em {
+    font-style: normal;
+    color: var(--neon);
+  }
+  .hero-sub {
+    font-size: 18px;
+    color: var(--muted);
+    max-width: 480px;
+    margin: 0 auto 2.5rem;
+    line-height: 1.6;
+  }
+  .hero-btns { display: flex; gap: 12px; justify-content: center; }
+  .btn-neon {
+    background: var(--neon);
+    color: var(--black);
+    font-weight: 500;
+    font-size: 15px;
+    padding: 14px 32px;
+    border-radius: 999px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: opacity .2s;
+  }
+  .btn-neon:hover { opacity: .85; }
+  .btn-outline {
+    background: transparent;
+    color: var(--white);
+    font-weight: 500;
+    font-size: 15px;
+    padding: 14px 32px;
+    border-radius: 999px;
+    border: 1px solid #333;
+    cursor: pointer;
+    text-decoration: none;
+    transition: border-color .2s;
+  }
+  .btn-outline:hover { border-color: #666; }
+
+  /* STATS */
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-bottom: 1px solid #1f1f1f;
+  }
+  .stat {
+    padding: 2.5rem 3rem;
+    border-right: 1px solid #1f1f1f;
+    text-align: center;
+  }
+  .stat:last-child { border-right: none; }
+  .stat-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 52px;
+    color: var(--neon);
+    letter-spacing: .02em;
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .stat-label { font-size: 13px; color: var(--muted); }
+
+  /* SECTION GENERIC */
+  section { padding: 5rem 3rem; border-bottom: 1px solid #1f1f1f; }
+  .section-eyebrow {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--neon);
+    margin-bottom: 1rem;
+  }
+  .section-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(40px, 6vw, 72px);
+    letter-spacing: .02em;
+    text-transform: uppercase;
+    line-height: 1;
+    color: var(--white);
+    margin-bottom: 1rem;
+  }
+  .section-sub {
+    font-size: 16px;
+    color: var(--muted);
+    max-width: 480px;
+    line-height: 1.7;
+    margin-bottom: 3rem;
+  }
+
+  /* HOW IT WORKS */
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: #1f1f1f;
+    border: 1px solid #1f1f1f;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  .step {
+    background: var(--gray);
+    padding: 2.5rem 2rem;
+    transition: background .2s;
+  }
+  .step:hover { background: var(--gray2); }
+  .step-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 48px;
+    color: #333;
+    margin-bottom: 1rem;
+    line-height: 1;
+  }
+  .step-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    color: var(--white);
+    letter-spacing: .04em;
+    margin-bottom: .75rem;
+  }
+  .step-desc { font-size: 14px; color: var(--muted); line-height: 1.6; }
+
+  /* SERVICES */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: #1f1f1f;
+    border: 1px solid #1f1f1f;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  .service {
+    background: var(--gray);
+    padding: 2.5rem;
+    transition: background .2s;
+  }
+  .service:hover { background: var(--gray2); }
+  .service-icon {
+    font-size: 32px;
+    margin-bottom: 1.25rem;
+    display: block;
+  }
+  .service-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 32px;
+    color: var(--white);
+    letter-spacing: .04em;
+    margin-bottom: .75rem;
+  }
+  .service-desc { font-size: 14px; color: var(--muted); line-height: 1.7; }
+
+  /* TESTIMONIAL */
+  .testimonial-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .testi {
+    background: var(--gray);
+    border: 1px solid #1f1f1f;
+    border-radius: 20px;
+    padding: 2rem;
+  }
+  .testi-text {
+    font-size: 17px;
+    color: var(--white);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+  }
+  .testi-text::before { content: '"'; color: var(--neon); font-size: 24px; }
+  .testi-author { display: flex; align-items: center; gap: 12px; }
+  .testi-av {
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    background: var(--neon);
+    color: var(--black);
+    font-weight: 500;
+    font-size: 13px;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .testi-name { font-size: 14px; font-weight: 500; color: var(--white); }
+  .testi-role { font-size: 12px; color: var(--muted); }
+
+  /* FAQ */
+  .faq-list { max-width: 800px; }
+  .faq-item {
+    border-bottom: 1px solid #1f1f1f;
+    padding: 1.5rem 0;
+    cursor: pointer;
+  }
+  .faq-q {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--white);
+  }
+  .faq-arrow {
+    font-size: 20px;
+    color: var(--neon);
+    transition: transform .3s;
+    flex-shrink: 0;
+  }
+  .faq-item.open .faq-arrow { transform: rotate(45deg); }
+  .faq-a {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.7;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .3s ease, padding .3s;
+  }
+  .faq-item.open .faq-a { max-height: 200px; padding-top: 1rem; }
+
+  /* CTA FOOTER */
+  .cta-footer {
+    background: var(--neon);
+    padding: 5rem 3rem;
+    text-align: center;
+    border-radius: 24px;
+    margin: 3rem;
+  }
+  .cta-footer h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(60px, 9vw, 110px);
+    color: var(--black);
+    letter-spacing: .02em;
+    line-height: .95;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+  .cta-footer p {
+    font-size: 17px;
+    color: #333;
+    margin-bottom: 2rem;
+  }
+  .btn-black {
+    background: var(--black);
+    color: var(--neon);
+    font-weight: 500;
+    font-size: 15px;
+    padding: 14px 36px;
+    border-radius: 999px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: opacity .2s;
+  }
+  .btn-black:hover { opacity: .85; }
+
+  footer {
+    padding: 2rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #1f1f1f;
+    font-size: 13px;
+    color: var(--muted);
+  }
+  footer .logo { font-size: 22px; }
+
+  @media (max-width: 768px) {
+    nav { padding: 1rem 1.5rem; }
+    .hero { padding: 4rem 1.5rem 3rem; }
+    .stats { grid-template-columns: 1fr; }
+    .stat { border-right: none; border-bottom: 1px solid #1f1f1f; }
+    section { padding: 3.5rem 1.5rem; }
+    .steps, .services-grid, .testimonial-wrap { grid-template-columns: 1fr; }
+    .cta-footer { margin: 1.5rem; padding: 3rem 1.5rem; }
+    footer { flex-direction: column; gap: 12px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">ALGO<span>LIFT</span></div>
+  <a href="https://calendly.com/lisandrozabalaisanovic/30min" target="_blank" class="nav-cta">Kostenloses Gespräch</a>
+</nav>
+
+<div class="hero">
+  <img class="hero-video" src="download.gif" alt="">
+  <div class="hero-content">
+    <div class="hero-tag">Organisches Wachstum</div>
+    <h1>Mehr Kunden.<br><em>Kein</em> Ad-Budget.</h1>
+    <p class="hero-sub">Wir übernehmen deinen Social-Media-Auftritt und bringen echtes, organisches Wachstum — ohne bezahlte Werbung.</p>
+    <div class="hero-btns">
+      <a href="https://calendly.com/lisandrozabalaisanovic/30min" target="_blank" class="btn-neon">Jetzt starten</a>
+      <a href="#wie" class="btn-outline">Wie es funktioniert</a>
+    </div>
+  </div>
+</div>
+
+<div class="stats">
+  <div class="stat">
+    <div class="stat-num">100%</div>
+    <div class="stat-label">Organisch — kein Ad-Budget nötig</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">30</div>
+    <div class="stat-label">Tage bis erste Ergebnisse sichtbar</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">2×</div>
+    <div class="stat-label">Mehr Anfragen im Schnitt</div>
+  </div>
+</div>
+
+<section id="wie">
+  <div class="section-eyebrow">So funktioniert es</div>
+  <div class="section-title">In 3 Schritten<br>zu mehr Reichweite</div>
+  <div class="section-sub">Kein Aufwand für dich — wir kümmern uns um alles.</div>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">01</div>
+      <div class="step-title">Kennenlernen</div>
+      <div class="step-desc">15-minütiges Gespräch — wir verstehen dein Business, deine Zielgruppe und deine Ziele.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">02</div>
+      <div class="step-title">Strategie & Content</div>
+      <div class="step-desc">Wir entwickeln eine Strategie und produzieren Content der deine Zielgruppe wirklich anspricht.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">03</div>
+      <div class="step-title">Wachstum</div>
+      <div class="step-desc">Wir posten, managen deine Community und optimieren jeden Monat auf Basis der Daten.</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="section-eyebrow">Was wir liefern</div>
+  <div class="section-title">Full Service.<br>Kein Stress.</div>
+  <div class="section-sub">Du fokussierst dich auf dein Business — wir machen den Rest.</div>
+  <div class="services-grid">
+    <div class="service">
+      <span class="service-icon">&#127916;</span>
+      <div class="service-title">Content Creation</div>
+      <div class="service-desc">Reels, Grafiken, Captions — alles was du brauchst um auf Social Media aufzufallen. Kreativ, authentisch und auf deine Marke zugeschnitten.</div>
+    </div>
+    <div class="service">
+      <span class="service-icon">&#128200;</span>
+      <div class="service-title">Wachstumsstrategie</div>
+      <div class="service-desc">Kein blindes Posten. Wir analysieren was funktioniert, passen die Strategie an und sorgen für nachhaltiges Wachstum.</div>
+    </div>
+    <div class="service">
+      <span class="service-icon">&#128172;</span>
+      <div class="service-title">Community Management</div>
+      <div class="service-desc">Wir beantworten Kommentare und DMs, bauen echte Beziehungen auf und machen deine Marke nahbar.</div>
+    </div>
+    <div class="service">
+      <span class="service-icon">&#128202;</span>
+      <div class="service-title">Analyse & Reporting</div>
+      <div class="service-desc">Monatliche Reports mit klaren Zahlen — Reichweite, Wachstum, Anfragen. Kein Bullshit, nur das was zählt.</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="section-eyebrow">Kundenstimmen</div>
+  <div class="section-title">Was unsere<br>Kunden sagen</div>
+  <div class="testimonial-wrap">
+    <div class="testi">
+      <div class="testi-text">Innerhalb von 6 Wochen hatten wir deutlich mehr Anfragen über Instagram. Der Content trifft genau unsere Zielgruppe und wir mussten uns um nichts kümmern.</div>
+      <div class="testi-author">
+        <div class="testi-av">MK</div>
+        <div>
+          <div class="testi-name">Markus K.</div>
+          <div class="testi-role">Inhaber, Bauunternehmen</div>
+        </div>
+      </div>
+    </div>
+    <div class="testi">
+      <div class="testi-text">Endlich jemand der Social Media wirklich versteht. Die Ergebnisse sprechen für sich — mehr Sichtbarkeit, mehr Vertrauen, mehr Mandanten.</div>
+      <div class="testi-author">
+        <div class="testi-av">SK</div>
+        <div>
+          <div class="testi-name">Stefan K.</div>
+          <div class="testi-role">Strafverteidiger</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="section-eyebrow">FAQ</div>
+  <div class="section-title">Häufige Fragen</div>
+  <div class="faq-list">
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">Was ist organisches Wachstum genau? <span class="faq-arrow">+</span></div>
+      <div class="faq-a">Organisches Wachstum bedeutet: echte Follower, echte Reichweite und echte Anfragen — ohne einen Euro für Werbung auszugeben. Wir nutzen Strategie, Content und Community-Aufbau statt bezahlter Ads.</div>
+    </div>
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">Wie schnell sieht man erste Ergebnisse? <span class="faq-arrow">+</span></div>
+      <div class="faq-a">Die ersten Ergebnisse sind meist nach 30 Tagen sichtbar. Signifikantes Wachstum entsteht typischerweise ab Monat 2–3, wenn der Algorithmus die Accounts aufgebaut hat.</div>
+    </div>
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">Was muss ich selbst tun? <span class="faq-arrow">+</span></div>
+      <div class="faq-a">Wenig. Wir übernehmen Strategie, Content, Posting und Community Management komplett. Du gibst uns einmal Zugang und wir liefern — monatlich ein Report damit du immer up to date bist.</div>
+    </div>
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">Für welche Unternehmen ist das geeignet? <span class="faq-arrow">+</span></div>
+      <div class="faq-a">Für jedes Unternehmen das eine Zielgruppe auf Social Media hat und sichtbarer werden will — ob Einzelunternehmer, Mittelständler oder wachsendes Startup.</div>
+    </div>
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">Wie läuft die Zusammenarbeit ab? <span class="faq-arrow">+</span></div>
+      <div class="faq-a">Kennenlerngespräch → Strategie → Onboarding → wir legen los. Monatlich gibt es einen Report und einen kurzen Check-in. Keine langen Verträge, keine Überraschungen.</div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-footer" id="kontakt">
+  <h2>Bereit zum<br>Wachsen?</h2>
+  <p>Kostenloses 15-Minuten-Gespräch — wir schauen ob wir zusammenpassen.</p>
+  <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+    <a href="https://calendly.com/lisandrozabalaisanovic/30min" target="_blank" class="btn-black">Gespräch buchen</a>
+    <a href="mailto:lisandrozabalaianovic@gmail.com" class="btn-black" style="background:#111;color:var(--neon);border:2px solid #000;">E-Mail schreiben</a>
+  </div>
+</div>
+
+<footer>
+  <div class="logo">ALGO<span style="color:var(--neon)">LIFT</span></div>
+  <div>Impressum &nbsp;·&nbsp; Datenschutz</div>
+</footer>
+
+<script>
+  function toggleFaq(el) {
+    el.classList.toggle('open');
+  }
+</script>
+</body>
+</html>
