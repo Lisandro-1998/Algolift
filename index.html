@@ -1552,10 +1552,43 @@
   }
   @media(max-width:900px){
     .founders{grid-template-columns:1fr;gap:3rem;}
-    .founder-visual{max-width:480px;margin:0 auto;}
-    /* MOBILE-SAFETY: Founder-Visual ist auf Mobile IMMER sichtbar.
-       Das verhindert dass das Foto durch reveal-z opacity:0 unsichtbar bleibt
-       falls IntersectionObserver auf iOS Safari versagt. */
+    .founder-visual{
+      max-width:480px;
+      margin:0 auto;
+      /* MOBILE-SAFETY: aspect-ratio durch padding-top hack ersetzt
+         (manche Mobile Safari Versionen rechnen aspect-ratio falsch) */
+      aspect-ratio:auto;
+      height:auto;
+      min-height:0;
+      padding-top:125%; /* 4:5 = 125% padding-top */
+      position:relative;
+    }
+    /* Foto füllt den padding-Container komplett — bulletproof Mobile */
+    .founder-visual .founder-photo{
+      position:absolute !important;
+      top:0 !important;
+      left:0 !important;
+      width:100% !important;
+      height:100% !important;
+      object-fit:cover !important;
+      object-position:center 30% !important;
+      display:block !important;
+      visibility:visible !important;
+      opacity:1 !important;
+      filter:none !important;
+      z-index:1 !important;
+      transform:none !important;
+    }
+    /* Pseudo-Elements bleiben als Glow, aber unter dem Foto */
+    .founder-visual::before,
+    .founder-visual::after{
+      z-index:0 !important;
+    }
+    /* Caption über dem Foto */
+    .founder-visual .photo-caption{
+      z-index:2 !important;
+    }
+    /* Founder-Visual auf Mobile IMMER sichtbar (kein reveal-z opacity:0) */
     .founder-visual.reveal-z{
       opacity:1 !important;
       transform:none !important;
