@@ -86,7 +86,7 @@
 <link rel="dns-prefetch" href="https://www.youtube.com">
 
 <!-- LCP-Optimierung: Founder-Photo Preload (high priority weil large content) -->
-<link rel="preload" as="image" href="/founders.webp" fetchpriority="high">
+<link rel="preload" as="image" href="/founders.jpg" fetchpriority="high">
 
 <!-- Fonts: Async-Load Pattern (nicht render-blocking) -->
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,ital,wght@12..96,0..1,300..800&family=DM+Sans:wght@400..600&family=Geist+Mono:wght@400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -1645,19 +1645,38 @@
     aspect-ratio:9/16;
     transition:transform .35s;
     background:linear-gradient(135deg,#1a1a1a,#0a0a0a);
+    background-size:cover;
+    background-position:center;
   }
   .rv-ig-thumb:hover{transform:scale(1.02);}
-  .rv-ig-thumb .rv-center{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;}
+  .rv-ig-overlay{
+    position:absolute;inset:0;
+    background:linear-gradient(180deg,
+      rgba(0,0,0,.15) 0%,
+      rgba(0,0,0,.35) 50%,
+      rgba(0,0,0,.55) 100%);
+    z-index:1;
+  }
+  .rv-ig-thumb .rv-center{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;z-index:2;}
   .rv-ig-content{flex:1;display:flex;flex-direction:column;justify-content:center;}
   .rv-yt-card{padding:2rem;}
   .rv-yt-thumb{
     border-radius:14px;overflow:hidden;
     position:relative;width:100%;aspect-ratio:16/9;
     background:linear-gradient(135deg,#1a1a1a,#0a0a0a);
+    background-size:cover;
+    background-position:center;
     margin-bottom:1.5rem;transition:transform .35s;
   }
   .rv-yt-thumb:hover{transform:scale(1.01);}
-  .rv-yt-thumb .rv-center{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;}
+  .rv-yt-overlay{
+    position:absolute;inset:0;
+    background:linear-gradient(180deg,
+      rgba(0,0,0,.2) 0%,
+      rgba(0,0,0,.4) 100%);
+    z-index:1;
+  }
+  .rv-yt-thumb .rv-center{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;z-index:2;}
   .rv-novid-card{padding:2rem;}
   .rv-play{
     width:64px;height:64px;border-radius:50%;
@@ -3099,8 +3118,11 @@
 
   <div class="founders">
     <div class="founder-visual reveal-z" data-delay="1">
-      <img
-          src="/founders.webp"
+      <picture>
+        <source srcset="/founders.webp" type="image/webp">
+        <source srcset="/founders.jpg" type="image/jpeg">
+        <img
+          src="/founders.jpg"
           alt="Lisandro Zabalaisanovic und Paul, Founders von Algolift"
           class="founder-photo"
           loading="eager"
@@ -3108,6 +3130,7 @@
           decoding="async"
           width="800"
           height="862">
+      </picture>
       <div class="photo-caption">
         <strong>Lisandro & Paul</strong>
         <span>Founders / Algolift Studio</span>
@@ -3463,8 +3486,8 @@ function faqKey(event, el){
 
 /* ===== Reviews Slider ===== */
 var rvData=[
-  {"i":"S","name":"Sebastian","role":"Unternehmer · @seb_in_samui","quote":"Ich sitze auf Koh Samui und mein Social Media läuft in Deutschland auf Autopilot. Das wäre ohne Algolift undenkbar. Paul & Lisandro kümmern sich um alles, kommunizieren schnell und liefern konstant guten Content.","tags":[{"t":"Instagram","g":0},{"t":"0 → 770 Follower in 2 Wochen","g":1}],"vid":{"type":"ig","url":"https://www.instagram.com/reel/DW_wIt7kWyX/"}},
-  {"i":"JC","name":"Jonathan","role":"CEO · Chavennes Consulting, Schweiz","quote":"Algolift war eine Top-Entscheidung. Sie haben nicht nur exzellent geschnitten, sondern genau verstanden, was unsere Zielgruppe anspricht. Sehr empfehlenswert.","tags":[{"t":"B2B Consulting","g":0},{"t":"Schweiz","g":1}],"vid":{"type":"ig","url":"https://www.instagram.com/reel/DUamA5djtgj/"}},
+  {"i":"S","name":"Sebastian","role":"Unternehmer · @seb_in_samui","quote":"Ich sitze auf Koh Samui und mein Social Media läuft in Deutschland auf Autopilot. Das wäre ohne Algolift undenkbar. Paul & Lisandro kümmern sich um alles, kommunizieren schnell und liefern konstant guten Content.","tags":[{"t":"Instagram","g":0},{"t":"0 → 770 Follower in 2 Wochen","g":1}],"vid":{"type":"ig","url":"https://www.instagram.com/reel/DW_wIt7kWyX/","thumb":"/reel-1.jpg"}},
+  {"i":"JC","name":"Jonathan","role":"CEO · Chavennes Consulting, Schweiz","quote":"Algolift war eine Top-Entscheidung. Sie haben nicht nur exzellent geschnitten, sondern genau verstanden, was unsere Zielgruppe anspricht. Sehr empfehlenswert.","tags":[{"t":"B2B Consulting","g":0},{"t":"Schweiz","g":1}],"vid":{"type":"ig","url":"https://www.instagram.com/reel/DUamA5djtgj/","thumb":"/reel-2.jpg"}},
   {"i":"MR","name":"Michael Rudy","role":"Content Creator · 49K IG / 72K YT","quote":"Wollte einfach mal Danke sagen für die Videos. Richtig gute und sehr schnelle Arbeit. Habe davor schon einige Cutter ausprobiert, aber so reibungslos ist das noch nie verlaufen.","tags":[{"t":"Instagram 49K","g":0},{"t":"YouTube 72K","g":1}],"vid":{"type":"yt","ytId":"zPnH1Gvnujc","start":6}},
   {"i":"DW","name":"David Weber","role":"Online Course Creator","quote":"Algolift hat meinen kompletten Online-Kurs aufgebaut und geschnitten. Schnell, effizient und wirklich durchdacht. Das Ergebnis hat alle meine Erwartungen übertroffen.","tags":[{"t":"Online Kurs","g":0},{"t":"Vollproduktion","g":1}],"vid":null}
 ];
@@ -3481,10 +3504,12 @@ var rvData=[
     var tags=r.tags.map(function(t){return '<span class="rv-tg'+(t.g?' rv-tgg':'')+'">'+t.t+'</span>';}).join('');
     var textHTML='<div class="rv-stars">'+stars+'</div><span class="rv-qm">"</span><p class="rv-qt">'+r.quote+'"</p><div class="rv-auth"><div class="rv-av">'+r.i+'</div><div><p class="rv-nm">'+r.name+'</p><p class="rv-rl">'+r.role+'</p><div class="rv-tags">'+tags+'</div></div></div>';
     if(r.vid && r.vid.type==='ig'){
-      var thumbHTML='<div class="rv-ig-thumb" id="rvig'+i+'"><div class="rv-center"><div class="rv-play"><div class="rv-tri"></div></div><span class="rv-iglbl">Reel</span></div><div class="rv-pbadge"><div class="rv-igdot"></div><span>INSTAGRAM</span></div></div>';
+      var bgStyle = r.vid.thumb ? ' style="background-image:url('+r.vid.thumb+');background-size:cover;background-position:center;"' : '';
+      var thumbHTML='<div class="rv-ig-thumb" id="rvig'+i+'"'+bgStyle+'><div class="rv-ig-overlay"></div><div class="rv-center"><div class="rv-play"><div class="rv-tri"></div></div><span class="rv-iglbl">Reel</span></div><div class="rv-pbadge"><div class="rv-igdot"></div><span>INSTAGRAM</span></div></div>';
       card.innerHTML='<div class="rv-ig-card">'+thumbHTML+'<div class="rv-ig-content">'+textHTML+'</div></div>';
     } else if(r.vid && r.vid.type==='yt'){
-      var ytHTML='<div class="rv-yt-thumb" id="rvyt'+i+'"><div class="rv-center"><div class="rv-play"><div class="rv-tri"></div></div></div><div class="rv-pbadge"><div class="rv-ytdot"></div><span>YOUTUBE</span></div></div>';
+      var ytBg = ' style="background-image:url(https://i.ytimg.com/vi/'+r.vid.ytId+'/maxresdefault.jpg);background-size:cover;background-position:center;"';
+      var ytHTML='<div class="rv-yt-thumb" id="rvyt'+i+'"'+ytBg+'><div class="rv-yt-overlay"></div><div class="rv-center"><div class="rv-play"><div class="rv-tri"></div></div></div><div class="rv-pbadge"><div class="rv-ytdot"></div><span>YOUTUBE</span></div></div>';
       card.innerHTML='<div class="rv-yt-card">'+ytHTML+textHTML+'</div>';
     } else {
       card.innerHTML='<div class="rv-novid-card">'+textHTML+'</div>';
