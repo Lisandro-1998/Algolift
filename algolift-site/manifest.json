@@ -1,0 +1,62 @@
+{
+  "name": "Algolift · Organische Social-Media-Strategie",
+  "short_name": "Algolift",
+  "description": "Algolift baut Social-Media-Auftritte, die organisch skalieren. Substanz statt Werbebudget.",
+  "lang": "de-DE",
+  "dir": "ltr",
+  "start_url": "/?utm_source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#06060a",
+  "theme_color": "#06060a",
+  "categories": ["business", "marketing", "productivity"],
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Kostenloses Gespräch buchen",
+      "short_name": "Slot buchen",
+      "description": "Direkt 15-Min-Gespräch buchen",
+      "url": "https://calendly.com/lisandrozabalaisanovic/30min",
+      "icons": [{ "src": "/favicon.png", "sizes": "any" }]
+    },
+    {
+      "name": "Services ansehen",
+      "short_name": "Services",
+      "url": "/#services",
+      "icons": [{ "src": "/favicon.png", "sizes": "any" }]
+    },
+    {
+      "name": "Studio kennenlernen",
+      "short_name": "Studio",
+      "url": "/#founders",
+      "icons": [{ "src": "/favicon.png", "sizes": "any" }]
+    }
+  ],
+  "prefer_related_applications": false
+}

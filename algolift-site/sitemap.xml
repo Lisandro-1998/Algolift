@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/0.9">
+
+  <url>
+    <loc>https://algolift.de/</loc>
+    <lastmod>2026-05-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="de-DE" href="https://algolift.de/"/>
+    <xhtml:link rel="alternate" hreflang="de-AT" href="https://algolift.de/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://algolift.de/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://algolift.de/"/>
+    <image:image>
+      <image:loc>https://algolift.de/og-image.jpg</image:loc>
+      <image:title>Algolift · Organische Social-Media-Strategie ohne Ad-Budget</image:title>
+      <image:caption>Algolift Studio — Organisches Wachstum für ambitionierte Brands</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://algolift.de/founders.webp</image:loc>
+      <image:title>Algolift Founders — Lisandro &amp; Paul</image:title>
+      <image:caption>Die Founder von Algolift Studio</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://algolift.de/#why</loc>
+    <lastmod>2026-05-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://algolift.de/#services</loc>
+    <lastmod>2026-05-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://algolift.de/#founders</loc>
+    <lastmod>2026-05-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://algolift.de/#reviews</loc>
+    <lastmod>2026-05-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://algolift.de/#faq</loc>
+    <lastmod>2026-05-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://algolift.de/#kontakt</loc>
+    <lastmod>2026-05-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://algolift.de/impressum</loc>
+    <lastmod>2026-05-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://algolift.de/datenschutz</loc>
+    <lastmod>2026-05-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+</urlset>

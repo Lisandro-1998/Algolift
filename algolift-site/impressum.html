@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Impressum · Algolift</title>
+<meta name="description" content="Impressum von Algolift LLC — gesetzliche Pflichtangaben gemäß §5 TMG.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://algolift.de/impressum">
+<meta name="theme-color" content="#06060a">
+<meta name="color-scheme" content="dark">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,ital,wght@12..96,0..1,300..800&family=DM+Sans:wght@400..600&family=Geist+Mono:wght@400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,ital,wght@12..96,0..1,300..800&family=DM+Sans:wght@400..600&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet"></noscript>
+
+<style>
+  :root{
+    --black:#06060a;
+    --black-2:#0c0c12;
+    --white:#f5f5f0;
+    --neon:#c8ff00;
+    --muted:rgba(245,245,240,.6);
+    --muted-2:rgba(245,245,240,.45);
+    --line:rgba(245,245,240,.1);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--black);
+    color:var(--white);
+    font-family:'DM Sans',-apple-system,sans-serif;
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  ::selection{background:var(--neon);color:var(--black);}
+
+  /* Header */
+  .legal-nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:1.2rem 2rem;
+    border-bottom:1px solid var(--line);
+    position:sticky;
+    top:0;
+    background:rgba(6,6,10,.75);
+    backdrop-filter:blur(20px);
+    -webkit-backdrop-filter:blur(20px);
+    z-index:50;
+  }
+  .logo{
+    font-family:'Bricolage Grotesque',sans-serif;
+    font-weight:700;
+    font-size:18px;
+    letter-spacing:-.02em;
+    color:var(--white);
+    text-decoration:none;
+  }
+  .logo span{color:var(--neon);}
+  .back-link{
+    font-family:'Geist Mono',monospace;
+    font-size:12px;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    color:var(--muted);
+    text-decoration:none;
+    transition:color .25s ease;
+  }
+  .back-link:hover{color:var(--neon);}
+
+  /* Page Container */
+  .legal-wrap{
+    max-width:760px;
+    margin:0 auto;
+    padding:5rem 2rem 6rem;
+    position:relative;
+  }
+  /* Subtle Background-Aurora */
+  .legal-wrap::before{
+    content:"";
+    position:fixed;
+    top:20%; left:-10%;
+    width:60%; height:60%;
+    background:radial-gradient(circle, rgba(122,58,255,.08), transparent 70%);
+    pointer-events:none;
+    z-index:-1;
+    filter:blur(40px);
+  }
+  .legal-wrap::after{
+    content:"";
+    position:fixed;
+    bottom:10%; right:-10%;
+    width:55%; height:55%;
+    background:radial-gradient(circle, rgba(45,212,191,.06), transparent 70%);
+    pointer-events:none;
+    z-index:-1;
+    filter:blur(40px);
+  }
+
+  .legal-eyebrow{
+    font-family:'Geist Mono',monospace;
+    font-size:11px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:var(--neon);
+    margin-bottom:1rem;
+    display:flex;
+    align-items:center;
+    gap:.7rem;
+  }
+  .legal-eyebrow::before{
+    content:"";
+    width:24px;height:1px;background:var(--neon);
+    box-shadow:0 0 10px rgba(200,255,0,.6);
+  }
+  h1{
+    font-family:'Bricolage Grotesque',sans-serif;
+    font-weight:600;
+    font-size:clamp(34px,4.5vw,56px);
+    letter-spacing:-.03em;
+    line-height:1.05;
+    margin-bottom:3rem;
+    color:var(--white);
+  }
+  h2{
+    font-family:'Bricolage Grotesque',sans-serif;
+    font-weight:600;
+    font-size:22px;
+    letter-spacing:-.01em;
+    margin-top:2.8rem;
+    margin-bottom:1rem;
+    color:var(--white);
+  }
+  h2:first-of-type{margin-top:0;}
+  p, li{
+    color:rgba(245,245,240,.78);
+    margin-bottom:1rem;
+  }
+  strong{color:var(--white);font-weight:500;}
+  em{font-style:normal;color:var(--neon);}
+  a{color:var(--neon);text-decoration:none;border-bottom:1px solid rgba(200,255,0,.3);transition:border-color .25s ease;}
+  a:hover{border-bottom-color:var(--neon);}
+  ul{padding-left:1.4rem;margin-bottom:1rem;}
+  li{margin-bottom:.4rem;}
+  .legal-block{
+    border-left:2px solid var(--line);
+    padding-left:1.5rem;
+    margin:1.5rem 0;
+  }
+  .legal-block strong{display:block;font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted-2);font-weight:500;margin-bottom:.4rem;}
+  .placeholder{
+    background:rgba(255,90,30,.08);
+    color:#ff8855;
+    padding:1px 6px;
+    border-radius:4px;
+    font-family:'Geist Mono',monospace;
+    font-size:.9em;
+  }
+
+  /* Footer */
+  footer{
+    border-top:1px solid var(--line);
+    padding:2.5rem 2rem;
+    text-align:center;
+  }
+  footer p{
+    font-family:'Geist Mono',monospace;
+    font-size:11px;
+    letter-spacing:.08em;
+    color:var(--muted-2);
+    margin:0;
+  }
+  footer .links{margin-top:1rem;display:flex;gap:1.5rem;justify-content:center;}
+  footer a{
+    border-bottom:none;
+    color:var(--muted);
+    font-family:'Geist Mono',monospace;
+    font-size:11px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+  }
+  footer a:hover{color:var(--neon);}
+
+  @media(max-width:640px){
+    .legal-nav{padding:1rem 1.25rem;}
+    .legal-wrap{padding:3rem 1.25rem 4rem;}
+    h1{margin-bottom:2rem;}
+    h2{margin-top:2.2rem;}
+  }
+</style>
+</head>
+<body>
+
+<header class="legal-nav">
+  <a href="/" class="logo">ALGO<span>LIFT</span></a>
+  <a href="/" class="back-link">← Zur Startseite</a>
+</header>
+
+<main class="legal-wrap">
+  <div class="legal-eyebrow">Legal</div>
+  <h1>Impressum</h1>
+
+  <p>Angaben gemäß §&nbsp;5 TMG und §&nbsp;55 RStV.</p>
+
+  <h2>Anbieter</h2>
+  <div class="legal-block">
+    <strong>Firma</strong>
+    Algolift LLC<br>
+    <em>(US Limited Liability Company)</em>
+  </div>
+
+  <div class="legal-block">
+    <strong>Sitz der Gesellschaft</strong>
+    <span class="placeholder">[Vollständige US-Adresse einfügen — Street, City, State, ZIP]</span>
+  </div>
+
+  <div class="legal-block">
+    <strong>State of Formation</strong>
+    <span class="placeholder">[Bundesstaat — z.&nbsp;B. Delaware, Wyoming]</span>
+  </div>
+
+  <div class="legal-block">
+    <strong>Registration Number</strong>
+    <span class="placeholder">[LLC-Reg-Nummer einfügen]</span>
+  </div>
+
+  <h2>Vertretungsberechtigt</h2>
+  <p>
+    Lisandro Zabalaisanovic, Co-Founder<br>
+    Paul, Co-Founder
+  </p>
+
+  <h2>Kontakt</h2>
+  <p>
+    Telefon: <a href="tel:+4915679713124">+49&nbsp;1567&nbsp;9713124</a><br>
+    E-Mail: <a href="mailto:info@algolift.de">info@algolift.de</a>
+  </p>
+
+  <h2>Verantwortlich für den Inhalt</h2>
+  <p>
+    Verantwortlich nach §&nbsp;55 Abs.&nbsp;2 RStV:<br>
+    Lisandro Zabalaisanovic<br>
+    c/o Algolift LLC<br>
+    Kontakt wie oben
+  </p>
+
+  <h2>EU-Vertreter (Art. 27 DSGVO)</h2>
+  <p>
+    Da Algolift LLC ihren Sitz außerhalb der EU hat, aber Dienstleistungen gegenüber Personen in der EU erbringt, gilt Art.&nbsp;27 DSGVO. Ein EU-Vertreter ist <span class="placeholder">[einzutragen falls bestellt]</span>. Für datenschutzrelevante Anfragen aus der EU steht <a href="mailto:info@algolift.de">info@algolift.de</a> zur Verfügung.
+  </p>
+
+  <h2>Streitschlichtung</h2>
+  <p>
+    Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener">https://ec.europa.eu/consumers/odr/</a>. Unsere E-Mail-Adresse findest du oben.
+  </p>
+  <p>
+    Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
+  </p>
+
+  <h2>Haftung für Inhalte</h2>
+  <p>
+    Als Diensteanbieter sind wir gemäß §&nbsp;7 Abs.&nbsp;1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§&nbsp;8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.
+  </p>
+
+  <h2>Haftung für Links</h2>
+  <p>
+    Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.
+  </p>
+
+  <h2>Urheberrecht</h2>
+  <p>
+    Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem Urheberrecht. Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.
+  </p>
+
+</main>
+
+<footer>
+  <p>© 2026 Algolift LLC · All rights reserved</p>
+  <div class="links">
+    <a href="/">Home</a>
+    <a href="/datenschutz">Datenschutz</a>
+  </div>
+</footer>
+
+</body>
+</html>
