@@ -86,7 +86,7 @@
 <link rel="dns-prefetch" href="https://www.youtube.com">
 
 <!-- LCP-Optimierung: Founder-Photo Preload (high priority weil large content) -->
-<link rel="preload" as="image" href="/founders.webp" fetchpriority="low">
+<link rel="preload" as="image" href="/founders.webp" fetchpriority="high">
 
 <!-- Fonts: Async-Load Pattern (nicht render-blocking) -->
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,ital,wght@12..96,0..1,300..800&family=DM+Sans:wght@400..600&family=Geist+Mono:wght@400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -1553,6 +1553,13 @@
   @media(max-width:900px){
     .founders{grid-template-columns:1fr;gap:3rem;}
     .founder-visual{max-width:480px;margin:0 auto;}
+    /* MOBILE-SAFETY: Founder-Visual ist auf Mobile IMMER sichtbar.
+       Das verhindert dass das Foto durch reveal-z opacity:0 unsichtbar bleibt
+       falls IntersectionObserver auf iOS Safari versagt. */
+    .founder-visual.reveal-z{
+      opacity:1 !important;
+      transform:none !important;
+    }
   }
 
   /* ============ ANTI-SALES STATEMENT ============ */
@@ -3063,7 +3070,8 @@
           src="/founders.webp"
           alt="Lisandro Zabalaisanovic und Paul, Founders von Algolift"
           class="founder-photo"
-          loading="lazy"
+          loading="eager"
+          fetchpriority="high"
           decoding="async"
           width="800"
           height="862">
@@ -3794,6 +3802,16 @@ var rvData=[
       revealEls.forEach(el => io.observe(el));
     }
   }
+
+  /* ========== 8b. SAFETY-FALLBACK: garantiert dass nichts unsichtbar bleibt ========== */
+  // Wenn IntersectionObserver versagt, langsam ist oder Element nie triggert,
+  // werden nach 2.5s alle reveal-z Elemente trotzdem sichtbar gemacht.
+  // Verhindert das Mobile-Problem dass Bilder unsichtbar bleiben.
+  setTimeout(() => {
+    document.querySelectorAll('.reveal-z:not(.in-view), .section-title:not(.in-view), .section-eyebrow:not(.in-view)').forEach(el => {
+      el.classList.add('in-view');
+    });
+  }, 2500);
 
 
   /* ========== 10. Magnetic Buttons — Linear/Stripe-Style ========== */
