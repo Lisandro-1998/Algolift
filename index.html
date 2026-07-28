@@ -1,11 +1,23 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
+<script>
+(function(){try{
+  var chosen=localStorage.getItem('lang');
+  if(chosen==='en'){location.replace('/en/');return;}
+  if(chosen==='de')return;
+  var l=(navigator.language||navigator.userLanguage||'en').toLowerCase();
+  if(l.indexOf('de')!==0){location.replace('/en/');}
+}catch(e){}})();
+</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>AlgoLift — Social Media Agentur für Handwerksunternehmen</title>
 <meta name="description" content="Social Media für Handwerks- und Bauunternehmen in Südtirol, der Schweiz, Österreich und Süddeutschland. Markenbild, Baudokumentation und Kanalführung.">
 <link rel="canonical" href="https://algolift.de/">
+<link rel="alternate" hreflang="de" href="https://algolift.de/">
+<link rel="alternate" hreflang="en" href="https://algolift.de/en/">
+<link rel="alternate" hreflang="x-default" href="https://algolift.de/">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta name="theme-color" content="#0E0E0D">
 <meta name="author" content="AlgoLift L.L.C.">
@@ -342,6 +354,15 @@ body.menu header .brand{color:var(--bone)}
 .fq .fa{overflow:hidden}
 .fq .fa p{color:var(--mute);font-size:clamp(14.5px,1.6vw,16px);line-height:1.65;max-width:62ch;padding-bottom:clamp(22px,2.6vw,32px);margin:0}
 @media(max-width:600px){.fq summary{gap:16px}}
+
+.langsw{display:flex;align-items:center;gap:2px;font-family:var(--mono);font-weight:500;font-size:11px;letter-spacing:.06em;margin-left:18px}
+.langsw a{padding:6px 7px;color:var(--mute);transition:color .3s var(--e);text-transform:uppercase}
+.langsw a.on{color:var(--ink)}
+.langsw a:hover{color:var(--ink)}
+.langsw .sep{color:var(--line)}
+header .langsw{margin-right:4px}
+@media(max-width:760px){header .langsw{display:none}#menu .langsw{margin:22px 0 0;margin-left:0}#menu .langsw a{padding:10px 12px 10px 0;font-size:13px}}
+.dark header .langsw a{color:#8A857C}
 .skip{position:absolute;left:-9999px;top:0;z-index:210;background:var(--ink);color:var(--bone);padding:0 20px;min-height:44px;display:inline-flex;align-items:center;border-radius:0 0 10px 0;font-size:14px;text-decoration:none}
 .skip:focus{left:0}
 .rv{animation:rvin .1s 3s forwards;opacity:0;transform:translateY(38px);transition:opacity 1s var(--e),transform 1s var(--e)}
@@ -376,6 +397,7 @@ body.menu header .brand{color:var(--bone)}
       <li><a href="#kontakt"><em>Kontakt</em><em>Kontakt</em></a></li>
     </ul>
     <a class="btn mag" href="https://calendly.com/algolift-info/30min" target="_blank" rel="noopener" data-c><s>Projekt anfragen</s><span class="dot"></span></a>
+    <div class="langsw"><a href="/" class="on" data-lang="de">DE</a><span class="sep">/</span><a href="/en/" data-lang="en">EN</a></div>
     <button class="burger" id="burger" aria-label="Menü öffnen" aria-expanded="false"><i></i><i></i></button>
   </div>
 </header>
@@ -385,6 +407,7 @@ body.menu header .brand{color:var(--bone)}
   <a href="#kunden">Kunden</a>
   <a href="#workflow">Ablauf</a>
   <a href="#faq">FAQ</a>
+  <div class="langsw"><a href="/" class="on" data-lang="de">DE</a><span class="sep">/</span><a href="/en/" data-lang="en">EN</a></div>
   <a class="m-cta" href="https://calendly.com/algolift-info/30min" target="_blank" rel="noopener">Kostenlose Einschätzung anfordern →</a>
 </nav>
 
@@ -726,5 +749,7 @@ dsg.addEventListener('click',e=>{if(e.target===dsg)dsgC()});
 addEventListener('keydown',e=>{if(e.key==='Escape')dsgC()});
 
 </script>
+<script>
+document.querySelectorAll('[data-lang]').forEach(function(a){a.addEventListener('click',function(){try{localStorage.setItem('lang',a.getAttribute('data-lang'))}catch(e){}})});</script>
 </body>
 </html>
