@@ -1,15 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script>
-(function(){try{
-  var chosen=localStorage.getItem('lang');
-  if(chosen==='de'){location.replace('/');return;}
-  if(chosen==='en')return;
-  var l=(navigator.language||navigator.userLanguage||'en').toLowerCase();
-  if(l.indexOf('de')===0){location.replace('/');}
-}catch(e){}})();
-</script>
+
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>AlgoLift — Social Media Agency for Trade & Construction</title>
@@ -22,9 +14,9 @@
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta name="theme-color" content="#0E0E0D">
 <meta name="author" content="AlgoLift L.L.C.">
-<link rel="icon" href="assets/favicon.ico" sizes="32x32">
-<link rel="icon" href="assets/icon-512.png" type="image/png" sizes="512x512">
-<link rel="apple-touch-icon" href="assets/icon-180.png">
+<link rel="icon" href="/assets/favicon.ico" sizes="32x32">
+<link rel="icon" href="/assets/icon-512.png" type="image/png" sizes="512x512">
+<link rel="apple-touch-icon" href="/assets/icon-180.png">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en">
 <meta property="og:site_name" content="AlgoLift">
@@ -39,16 +31,16 @@
 <meta name="twitter:title" content="AlgoLift — Social Media for Trade & Construction">
 <meta name="twitter:description" content="Brand image, jobsite documentation and channel management for trade and construction companies.">
 <meta name="twitter:image" content="https://algolift.de/assets/og.jpg">
-<link rel="preload" as="font" type="font/woff2" href="assets/fonts/bricolage-grotesque-800.woff2" crossorigin>
-<link rel="preload" as="font" type="font/woff2" href="assets/fonts/dm-sans-300.woff2" crossorigin>
-<link rel="preload" as="image" href="assets/poster.jpg" fetchpriority="high">
+<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/bricolage-grotesque-800.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/dm-sans-300.woff2" crossorigin>
+<link rel="preload" as="image" href="/assets/poster.jpg" fetchpriority="high">
 
 <style>
-@font-face{font-family:'Bricolage Grotesque';src:url('assets/fonts/bricolage-grotesque-500.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap}
-@font-face{font-family:'Bricolage Grotesque';src:url('assets/fonts/bricolage-grotesque-800.woff2') format('woff2');font-weight:800;font-style:normal;font-display:swap}
-@font-face{font-family:'DM Sans';src:url('assets/fonts/dm-sans-300.woff2') format('woff2');font-weight:300;font-style:normal;font-display:swap}
-@font-face{font-family:'DM Sans';src:url('assets/fonts/dm-sans-400.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
-@font-face{font-family:'DM Sans';src:url('assets/fonts/dm-sans-500.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:'Bricolage Grotesque';src:url('/assets/fonts/bricolage-grotesque-500.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:'Bricolage Grotesque';src:url('/assets/fonts/bricolage-grotesque-800.woff2') format('woff2');font-weight:800;font-style:normal;font-display:swap}
+@font-face{font-family:'DM Sans';src:url('/assets/fonts/dm-sans-300.woff2') format('woff2');font-weight:300;font-style:normal;font-display:swap}
+@font-face{font-family:'DM Sans';src:url('/assets/fonts/dm-sans-400.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'DM Sans';src:url('/assets/fonts/dm-sans-500.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap}
 :root{
   --bone:#F7F5F1;--bone2:#EDEAE4;--ink:#0E0E0D;--ink2:#33312D;--mute:#8A857C;
   --sig:#FF4A1C;--deep:#1A1917;--line:rgba(14,14,13,.13);
@@ -371,7 +363,7 @@ header .langsw{margin-right:4px}
 @keyframes rvin{to{opacity:1;transform:none}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv,.fade{opacity:1;transform:none}.h1 .ln>i{transform:none}#load{display:none}.card{position:static}html{scroll-behavior:auto}}
 </style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","@id":"https://algolift.de/#org","name":"AlgoLift","legalName":"AlgoLift L.L.C.","url":"https://algolift.de/","logo":"https://algolift.de/assets/icon-512.png","image":"https://algolift.de/assets/og.jpg","email":"Info@algolift.de","description":"Social media agency for trade and construction companies: brand image, jobsite documentation and channel management.","founder":{"@type":"Person","name":"Lisandro Zabala"},"address":{"@type":"PostalAddress","streetAddress":"1209 Mountain Road Pl NE, Ste N","addressLocality":"Albuquerque","addressRegion":"NM","postalCode":"87110","addressCountry":"US"},"areaServed":[{"@type":"Place","name":"Südtirol, Italien"},{"@type":"Country","name":"Schweiz"},{"@type":"Country","name":"Deutschland"},{"@type":"Country","name":"Österreich"}],"knowsLanguage":["de","it","en"],"priceRange":"$$$","slogan":"Premium gebaut. Endlich angefragt.","availableLanguage":["Deutsch","Italienisch"],"contactPoint":{"@type":"ContactPoint","contactType":"Vertrieb","email":"Info@algolift.de","availableLanguage":["de","it"]},"serviceType":["Social Media Marketing","Videoproduktion","Baustellendokumentation","Markenpositionierung"],"hasOfferCatalog":{"@type":"OfferCatalog","name":"Leistungen","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Markenbild"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Baudokumentation"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Kanalführung"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Anfragequalität"}}]}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","@id":"https://algolift.de/#org","name":"AlgoLift","legalName":"AlgoLift L.L.C.","url":"https://algolift.de/","logo":"https://algolift.de/assets/icon-512.png","image":"https://algolift.de/assets/og.jpg","email":"Info@algolift.de","description":"Social media agency for trade and construction companies: brand image, jobsite documentation and channel management.","founder":{"@type":"Person","name":"Lisandro Zabala"},"address":{"@type":"PostalAddress","streetAddress":"1209 Mountain Road Pl NE, Ste N","addressLocality":"Albuquerque","addressRegion":"NM","postalCode":"87110","addressCountry":"US"},"areaServed":[{"@type":"Place","name":"Südtirol, Italien"},{"@type":"Country","name":"Schweiz"},{"@type":"Country","name":"Deutschland"},{"@type":"Country","name":"Österreich"}],"knowsLanguage":["de","it","en"],"priceRange":"$$$","slogan":"Premium built. Finally booked.","availableLanguage":["Deutsch","Italienisch"],"contactPoint":{"@type":"ContactPoint","contactType":"Vertrieb","email":"Info@algolift.de","availableLanguage":["de","it"]},"serviceType":["Social Media Marketing","Videoproduktion","Baustellendokumentation","Markenpositionierung"],"hasOfferCatalog":{"@type":"OfferCatalog","name":"Leistungen","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Markenbild"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Baudokumentation"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Kanalführung"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Anfragequalität"}}]}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","url":"https://algolift.de/","name":"AlgoLift","inLanguage":"en","publisher":{"@id":"https://algolift.de/#org"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much time does working together cost me?","acceptedAnswer":{"@type":"Answer","text":"About three hours up front for the assessment and signing off the strategy. After that, roughly 20 minutes a month to approve the finished content."}},{"@type":"Question","name":"Do we have to film ourselves?","acceptedAnswer":{"@type":"Answer","text":"Yes. Your team captures the live jobsite on their phones after a short briefing from us. We turn the raw footage into finished content."}},{"@type":"Question","name":"Which regions do you work in?","acceptedAnswer":{"@type":"Answer","text":"We serve trade, construction and timber companies across South Tyrol, Switzerland, Austria and southern Germany, some across several locations."}},{"@type":"Question","name":"Which channels do you run?","acceptedAnswer":{"@type":"Answer","text":"LinkedIn for clients, architects and investors, Instagram for regional visibility. Both channels are handled separately, not cross-posted."}},{"@type":"Question","name":"How long until the first result?","acceptedAnswer":{"@type":"Answer","text":"The first published project takes around six weeks. After that we publish monthly, with a review once a quarter."}},{"@type":"Question","name":"What happens in the first call?","acceptedAnswer":{"@type":"Answer","text":"30 minutes, free. You get an honest assessment of your presence and see examples from our work. No sales pitch."}}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"In vier Schritten zum sichtbaren Auftritt","description":"So läuft die Zusammenarbeit mit AlgoLift ab.","totalTime":"P6W","step":[{"@type":"HowToStep","position":1,"name":"Bestandsaufnahme","text":"Two hours of your time. After that, most of it runs without you."},{"@type":"HowToStep","position":2,"name":"Strategie","text":"Wofür Sie stehen und für wen. Sie bekommen einen schriftlichen Rahmen und geben ihn frei."},{"@type":"HowToStep","position":3,"name":"Produktion","text":"Ihr Team hält die laufende Baustelle mit dem Handy fest. Aus dem Rohmaterial machen wir fertige Inhalte."},{"@type":"HowToStep","position":4,"name":"Betrieb","text":"Wir veröffentlichen monatlich, Sie geben einmal im Monat kurz frei."}]}</script>
@@ -388,7 +380,7 @@ header .langsw{margin-right:4px}
 
 <header id="hd">
   <div class="wrap nav">
-    <a class="brand" href="/en/#hero" aria-label="AlgoLift Startseite" data-c><svg class="lg"><use href="#al"/></svg></a>
+    <a class="brand" href="/en/#hero" aria-label="AlgoLift home" data-c><svg class="lg"><use href="#al"/></svg></a>
     <ul>
       <li><a href="#kosten"><em>Why</em><em>Why</em></a></li>
       <li><a href="#leistungen"><em>Services</em><em>Services</em></a></li>
@@ -399,7 +391,7 @@ header .langsw{margin-right:4px}
     </ul>
     <a class="btn mag" href="https://calendly.com/algolift-info/30min" target="_blank" rel="noopener" data-c><s>Start a project</s><span class="dot"></span></a>
     <div class="langsw"><a href="/" data-lang="de">DE</a><span class="sep">/</span><a href="/en/" class="on" data-lang="en">EN</a></div>
-    <button class="burger" id="burger" aria-label="Menü öffnen" aria-expanded="false"><i></i><i></i></button>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><i></i><i></i></button>
   </div>
 </header>
 <nav id="menu">
@@ -414,9 +406,9 @@ header .langsw{margin-right:4px}
 
 <main id="main">
 <div class="hero">
-  <video id="hv" disablepictureinpicture disableremoteplayback aria-label="Aerial view of a completed construction project" autoplay muted loop playsinline preload="metadata" data-mobile="assets/hero-mobile.mp4" poster="assets/poster.jpg">
-    <source id="vsrc" src="assets/hero-1080.mp4" type="video/mp4">
-    <source src="assets/hero-mobile.webm" type="video/webm">
+  <video id="hv" disablepictureinpicture disableremoteplayback aria-label="Aerial view of a completed construction project" autoplay muted loop playsinline preload="metadata" data-mobile="/assets/hero-mobile.mp4" poster="/assets/poster.jpg">
+    <source id="vsrc" src="/assets/hero-1080.mp4" type="video/mp4">
+    <source src="/assets/hero-mobile.webm" type="video/webm">
   </video>
   <div class="ov"></div>
   <div class="wrap">
@@ -434,7 +426,7 @@ header .langsw{margin-right:4px}
   </div>
 </div>
 
-<section class="statbar rv" aria-label="AlgoLift in Zahlen">
+<section class="statbar rv" aria-label="AlgoLift in numbers">
   <div class="wrap">
     <ul class="stat-row">
       <li><span class="tick"></span><span class="num" data-n="10" data-s="+">10+</span><span class="lbl">companies served</span></li>
@@ -465,10 +457,10 @@ header .langsw{margin-right:4px}
       <p style="max-width:30ch;color:var(--mute)">Each with a defined outcome. No packages, no reach promises.</p>
     </div>
     <div class="stack">
-      <article class="card"><div class="ph"><picture><source srcset="assets/card-a.webp" type="image/webp"><img src="assets/card-a.jpg" alt="Beleuchtetes Holztragwerk eines Neubaus bei Dämmerung" width="2400" height="1400" loading="lazy" decoding="async"></picture></div><div class="top"><span>A — Brand image</span><span>01/04</span></div><div class="txt"><h3>Brand image</h3><p>So people recognise you before the company name is even mentioned. Visual language and typography drawn from your own material — not from a template.</p><span class="arw" style="margin-top:22px">↗</span></div></article>
-      <article class="card"><div class="ph"><picture><source srcset="assets/card-b.webp" type="image/webp"><img src="assets/card-b.jpg" alt="Bauleiter dokumentiert eine Baustelle mit Kamera und Smartphone" width="2400" height="1400" loading="lazy" decoding="async"></picture></div><div class="top"><span>B — Production</span><span>02/04</span></div><div class="txt"><h3>Jobsite&shy;docs</h3><p>So you never hunt for material again. You send us footage from the jobsite, we turn it into finished content.</p><span class="arw" style="margin-top:22px">↗</span></div></article>
-      <article class="card"><div class="ph"><picture><source srcset="assets/card-c.webp" type="image/webp"><img src="assets/card-c.jpg" alt="Instagram-Feed mit Architekturvideo auf einem Smartphone" width="2400" height="1400" loading="lazy" decoding="async"></picture></div><div class="top"><span>C — Distribution</span><span>03/04</span></div><div class="txt"><h3>Channels</h3><p>So the right people see it. LinkedIn for clients, architects and investors, Instagram for regional visibility. Thought through separately, not cross-posted.</p><span class="arw" style="margin-top:22px">↗</span></div></article>
-      <article class="card"><div class="ph"><picture><source srcset="assets/card-d.webp" type="image/webp"><img src="assets/card-d.jpg" alt="Zwei Bauarbeiter besprechen einen Bauplan auf der Baustelle" width="2400" height="1400" loading="lazy" decoding="async"></picture></div><div class="top"><span>D — Positioning</span><span>04/04</span></div><div class="txt"><h3>Enquiry&shy;quality</h3><p>So you argue less. Your positioning filters out the wrong enquiries before the conversation even starts.</p><span class="arw" style="margin-top:22px">↗</span></div></article>
+      <article class="card"><div class="ph"><picture><source srcset="/assets/card-a.webp" type="image/webp"><img src="/assets/card-a.jpg" alt="Illuminated timber structure of a new build at dusk" width="2400" height="1400" loading="lazy" decoding="async"></picture></div><div class="top"><span>A — Brand image</span><span>01/04</span></div><div class="txt"><h3>Brand image</h3><p>So people recognise you before the company name is even mentioned. Visual language and typography drawn from your own material — not from a template.</p><span class="arw" style="margin-top:22px">↗</span></div></article>
+      <article class="card"><div class="ph"><picture><source srcset="/assets/card-b.webp" type="image/webp"><img src="/assets/card-b.jpg" alt="Site manager documenting a jobsite with a camera and smartphone" width="2400" height="1400" loading="lazy" decoding="async"></picture></div><div class="top"><span>B — Production</span><span>02/04</span></div><div class="txt"><h3>Jobsite&shy;docs</h3><p>So you never hunt for material again. You send us footage from the jobsite, we turn it into finished content.</p><span class="arw" style="margin-top:22px">↗</span></div></article>
+      <article class="card"><div class="ph"><picture><source srcset="/assets/card-c.webp" type="image/webp"><img src="/assets/card-c.jpg" alt="Instagram feed showing an architecture video on a smartphone" width="2400" height="1400" loading="lazy" decoding="async"></picture></div><div class="top"><span>C — Distribution</span><span>03/04</span></div><div class="txt"><h3>Channels</h3><p>So the right people see it. LinkedIn for clients, architects and investors, Instagram for regional visibility. Thought through separately, not cross-posted.</p><span class="arw" style="margin-top:22px">↗</span></div></article>
+      <article class="card"><div class="ph"><picture><source srcset="/assets/card-d.webp" type="image/webp"><img src="/assets/card-d.jpg" alt="Two construction workers discussing a plan on the jobsite" width="2400" height="1400" loading="lazy" decoding="async"></picture></div><div class="top"><span>D — Positioning</span><span>04/04</span></div><div class="txt"><h3>Enquiry&shy;quality</h3><p>So you argue less. Your positioning filters out the wrong enquiries before the conversation even starts.</p><span class="arw" style="margin-top:22px">↗</span></div></article>
     </div>
   </div>
 </section>
@@ -529,7 +521,7 @@ header .langsw{margin-right:4px}
 
 <div class="cta" id="kontakt">
   <div class="cta-bg" aria-hidden="true">
-    <picture><source srcset="assets/team-wide.webp" type="image/webp"><img src="assets/team-wide.jpg" alt="" width="2200" height="1300" loading="lazy" decoding="async"></picture>
+    <picture><source srcset="/assets/team-wide.webp" type="image/webp"><img src="/assets/team-wide.jpg" alt="" width="2200" height="1300" loading="lazy" decoding="async"></picture>
   </div>
   <div class="cta-body">
     <div class="clogo rv"><svg class="lg"><use href="#al"/></svg></div>
@@ -550,9 +542,9 @@ header .langsw{margin-right:4px}
   </div>
 </footer>
 
-<div id="dsg" role="dialog" aria-modal="true" aria-label="Datenschutzerklärung">
+<div id="dsg" role="dialog" aria-modal="true" aria-label="Privacy policy">
   <div class="sheet">
-    <span class="close" id="dsgx" data-c aria-label="Schließen">&times;</span>
+    <span class="close" id="dsgx" data-c aria-label="Close">&times;</span>
     <h2>Privacy</h2>
 
     <h3>1. Controller</h3>
@@ -592,7 +584,7 @@ header .langsw{margin-right:4px}
 
 <div id="imp" role="dialog" aria-modal="true" aria-label="Impressum">
   <div class="sheet">
-    <span class="close" id="impx" data-c aria-label="Schließen">&times;</span>
+    <span class="close" id="impx" data-c aria-label="Close">&times;</span>
     <h2>Legal notice</h2>
     <h3>Provider</h3>
     <p>AlgoLift L.L.C.</p>
